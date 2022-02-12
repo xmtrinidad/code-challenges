@@ -1,9 +1,9 @@
 # Code Challenges
 
-This repo is for practicing various features I find interesting on sites I come across.
+This repo is for practicing, reviewing and learning various concepts I'm interested in learning.
 
 ## Goals
 
-* Replicate if possible
-* Learn new technologies
+* Replicate functionality from web sites with interesting UI patterns
+* Learn new technologies (design patterns, JavaScript featues I've never used, code challenges etc)
 * Document improvements and process
