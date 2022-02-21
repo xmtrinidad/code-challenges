@@ -9,3 +9,7 @@ Using a Factory Function to create a new object.  A *factory function* is a func
 ## Singleton Pattern
 
 Classes that are instantiated one, and accessed globally.  A single instance is shared throughout the entire application.
+
+## Proxy Pattern
+
+Use a proxy to interact with an object.  Utilized the Proxy object (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy)
