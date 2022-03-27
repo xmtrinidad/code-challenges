@@ -1,0 +1,99 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.eye-container {
+  background-color: #f5efd7;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 150px;
+}
+
+.eyelids {
+  border: 2px solid black;
+  width: 154px;
+  height: 89px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  background-color: #fff;
+  border-radius: 30px;
+}
+
+.eyelid {
+  width: 180px;
+  height: 180px;
+  border-radius: 100%;
+  border: 23px solid #ffd229;
+}
+
+.eyelid-bottom-container {
+  max-height: 130px;
+  overflow: hidden;
+  transform: rotate(180deg);
+  position: absolute;
+  z-index: 10;
+}
+
+.eyelid-top-container {
+  position: absolute;
+  max-height: 130px;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.eyeball {
+  width: 70px;
+  height: 70px;
+  background-color: #00aaf0;
+  border-radius: 100%;
+  position: relative;
+  top: -16px;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pupil {
+  background-color: #3860ff;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+}
+
+.eyelashes {
+  /* border: 2px solid red; */
+  width: 154px;
+  height: 89px;
+  display: flex;
+  justify-content: center;
+}
+
+.eyelash {
+  width: 25px;
+  height: 40px;
+  background-color: #3860ff;
+}
+
+.eyelash:nth-child(1) {
+  transform: rotate(-25deg);
+  transform-origin: bottom right;
+} 
+
+.eyelash:nth-child(2) {
+  margin: 0 24px;
+}
+
+.eyelash:nth-child(3) {
+  transform: rotate(25deg);
+  transform-origin: bottom left;
+} 
