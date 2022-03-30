@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+}
+
+.bohr-model {
+  border: 2px solid red;
+  width: 400px;
+  height: 400px;
+  margin: 24px auto;
+}
+
+.ring {
+  border: 3px solid #000;
+  border-radius: 100%;
+}
+
+.element {
+  width: 80px;
+  height: 80px;
+  background-color: #f8c863;
+  font-weight: bold;
+  animation-duration: 5s;
+  animation-name: orbit;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.s {
+  width: 160px;
+  height: 160px;
+  position: relative;
+}
+
+.p {
+  width: 240px;
+  height: 240px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.atom {
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  background-color: aqua;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  animation-duration: 5s;
+  /* animation-name: orbit; */
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.s {
+  animation-duration: 5s;
+  animation-name: spin-opposite;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes orbit {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-opposite {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
