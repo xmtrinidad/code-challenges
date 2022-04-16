@@ -29,21 +29,22 @@ html, body {
   animation-timing-function: linear;
 }
 
+.s, .p {
+  position: relative;
+}
+
 .s {
   width: 160px;
   height: 160px;
-  position: relative;
+  animation-duration: 5s;
+  animation-name: spin-opposite;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
 .p {
   width: 240px;
   height: 240px;
-}
-
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .atom {
@@ -52,19 +53,22 @@ html, body {
   border-radius: 100%;
   background-color: aqua;
   position: absolute;
-  top: 40px;
-  left: 0;
-  animation-duration: 5s;
-  /* animation-name: orbit; */
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
 }
 
-.s {
-  animation-duration: 5s;
-  animation-name: spin-opposite;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+.s .atom {
+  top: 40px;
+  left: 0;
+}
+
+.p .atom {
+  border: 2px solid red;
+  top: 0;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @keyframes orbit {
