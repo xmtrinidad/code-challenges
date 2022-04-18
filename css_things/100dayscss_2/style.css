@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.container {
+  width: 350px;
+  height: 350px;
+  background-color: #3faf82;
+  margin: 48px auto;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 0;
+  transition: gap .2s ease, margin .2s ease;
+}
+
+.hamburger .bar {
+  width: 75px;
+  height: 7px;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  transform: rotate(0);
+  transition: transform .2s ease .5s, opacity .2s ease .5s
+}
+
+.hamburger[active] {
+  gap: 0px;
+}
+
+.hamburger[active] .bar {
+  margin: -3px;
+}
+
+.hamburger[active] .bar:first-child {
+  transform: rotate(45deg);
+}
+
+.hamburger[active] .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger[active] .bar:last-child {
+  transform: rotate(-45deg);
+}

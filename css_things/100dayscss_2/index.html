@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>100 Days CSS Challenge #2</title>
+</head>
+<body>
+  <main>
+    <div class="container">
+      <button class="hamburger" onclick="onHamburgerClick(this)">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </button>
+    </div>
+  </main>
+  
+</body>
+<script>
+  function onHamburgerClick(btn) {
+    !btn.hasAttribute('active') ? btn.setAttribute('active', '') : btn.removeAttribute('active');
+  }
+</script>
+</html>
