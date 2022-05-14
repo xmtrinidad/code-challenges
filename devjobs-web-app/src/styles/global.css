@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Tapestry&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Tapestry', cursive;
+}
+
+h1, h2 {
+  margin: 0;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #f5f6f8;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}

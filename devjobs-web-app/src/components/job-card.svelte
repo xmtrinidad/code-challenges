@@ -1,0 +1,23 @@
+<div class="job-card">
+  <div class="job-card-header">
+    <div class="job-card-header__logo">
+      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M6.5 10h-2v7h2v-7zm6 0h-2v7h2v-7zm8.5 9H2v2h19v-2zm-2.5-9h-2v7h2v-7zm-7-6.74L16.71 6H6.29l5.21-2.74m0-2.26L2 6v2h19V6l-9.5-5z"/></svg>
+    </div>
+  </div>
+  <div class="job-card-body">
+    <div class="job-card-body__time">
+      <span>5h ago * Full Time</span>
+    </div>
+    <div class="job-card-body__job-title">
+      <h2>Senior Software Engineer</h2>
+      <span class="company">Scoot</span>
+    </div>
+  </div>
+  <div class="job-card-footer">
+    <span class="location">United Kingdom</span>
+  </div>
+</div>
+
+<style>
+  
+</style>
