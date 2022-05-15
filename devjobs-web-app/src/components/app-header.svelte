@@ -1,5 +1,6 @@
 <script lang="ts">
   import ThemeToggle from "./theme-toggle.svelte"
+  import SearchFilter from "./search-filter.svelte";
 </script>
 
 <header>
@@ -9,6 +10,7 @@
   <div class="col col-right">
     <ThemeToggle></ThemeToggle>
   </div>
+  <SearchFilter></SearchFilter>
 </header>
 
 
@@ -24,6 +26,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
   }
 
   @media(min-width: 768px) {
