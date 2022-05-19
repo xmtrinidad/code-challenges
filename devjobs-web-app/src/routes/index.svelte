@@ -7,6 +7,6 @@
   ]
 </script>
 
-<div class="cards">
+<!-- <div class="cards">
   <JobCard></JobCard>
-</div>
+</div> -->

@@ -3,22 +3,31 @@
   import SearchIcon from './svgs/search.svelte';
 </script>
 
-<div class="search-filter">
-  <div class="col-mobile title-input-container">
-    <label for="title_input">Filter by title, companies, expertise, etc</label>
-    <input placeholder="Filter by title" type="text" id="title_input">
+<div class="search-filter-mobile">
+  <div class="mobile-main">
+    <div class="col-mobile input-container">
+      <label for="title_input">Filter by title, companies, expertise, etc</label>
+      <input placeholder="Filter by title" type="text" id="title_input">
+    </div>
+    <div class="col-mobile mobile-actions-col">
+      <button class="filter-btn"><FilterIcon svgColor="#6e8098" width="28px" height="28px"></FilterIcon></button>
+      <button class="search-btn"><SearchIcon svgColor="#fff"></SearchIcon></button>
+    </div>
   </div>
-  <div class="col-mobile mobile-actions-col">
-    <button class="filter-btn"><FilterIcon svgColor="#6e8098" width="28px" height="28px"></FilterIcon></button>
-    <button class="search-btn"><SearchIcon svgColor="#fff"></SearchIcon></button>
+  <div class="mobile-additional">
+    <div class="col-mobile input-container">
+      <label for="location_input">Filter by location</label>
+      <input placeholder="Filter by location" type="text" id="location_input">
+    </div>
+    <div class="col-mobile full-time-mobile-checkbox-container">
+      <input type="checkbox" id="full-time-checkbox" name="vehicle1" value="Bike">
+      <label for="full-time-checkbox">Full Time Only</label>
+    </div>
   </div>
 </div>
 
 <style>
-  .search-filter {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  .search-filter-mobile {
     position: absolute;
     top: 100px;
     background-color: #fff;
@@ -32,12 +41,23 @@
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.2);
   }
 
+  .mobile-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .col-mobile {
+    display: flex;
+    align-items: center;
+  }
+
   .mobile-actions-col {
     display: flex;
     gap: 12px
   }
 
-  .title-input-container {
+  .input-container {
     width: 100%;
   }
 
@@ -57,5 +77,18 @@
   .search-btn {
     background-color: #5965df;
     border-radius: 6px;
+  }
+
+  .mobile-additional {
+    margin-top: 12px;
+  }
+
+  label[for="full-time-checkbox"] {
+    opacity: 1;
+    pointer-events: initial;
+    position: static;
+    color: #000;
+    font-weight: bold;
+    margin-left: 4px;
   }
 </style>
