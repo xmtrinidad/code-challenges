@@ -1,6 +1,16 @@
 <script lang="ts">
   import FilterIcon from "./svgs/filter.svelte";
   import SearchIcon from './svgs/search.svelte';
+
+  let isFilterActive = false;
+
+  function filterToggle() {
+    isFilterActive = !isFilterActive;
+  }
+
+  function onSearch() {
+    console.log('search works');
+  }
 </script>
 
 <div class="search-filter-mobile">
@@ -10,20 +20,23 @@
       <input placeholder="Filter by title" type="text" id="title_input">
     </div>
     <div class="col-mobile mobile-actions-col">
-      <button class="filter-btn"><FilterIcon svgColor="#6e8098" width="28px" height="28px"></FilterIcon></button>
-      <button class="search-btn"><SearchIcon svgColor="#fff"></SearchIcon></button>
+      <button class="filter-btn" on:click={filterToggle}><FilterIcon svgColor="#6e8098" width="28px" height="28px"></FilterIcon></button>
+      <button class="search-btn" on:click={onSearch}><SearchIcon svgColor="#fff"></SearchIcon></button>
     </div>
   </div>
-  <div class="mobile-additional">
-    <div class="col-mobile input-container">
-      <label for="location_input">Filter by location</label>
-      <input placeholder="Filter by location" type="text" id="location_input">
+  {#if isFilterActive}
+    <div class="mobile-additional">
+      <div class="col-mobile input-container">
+        <label for="location_input">Filter by location</label>
+        <input placeholder="Filter by location" type="text" id="location_input">
+      </div>
+      <div class="col-mobile full-time-mobile-checkbox-container">
+        <input type="checkbox" id="full-time-checkbox" name="vehicle1" value="Bike">
+        <label for="full-time-checkbox">Full Time Only</label>
+      </div>
     </div>
-    <div class="col-mobile full-time-mobile-checkbox-container">
-      <input type="checkbox" id="full-time-checkbox" name="vehicle1" value="Bike">
-      <label for="full-time-checkbox">Full Time Only</label>
-    </div>
-  </div>
+  {/if}
+  
 </div>
 
 <style>
@@ -90,5 +103,11 @@
     color: #000;
     font-weight: bold;
     margin-left: 4px;
+  }
+
+  @media (min-width: 768px) {
+    .mobile-additional {
+      display: none;
+    }
   }
 </style>
