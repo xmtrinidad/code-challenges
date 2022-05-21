@@ -1,24 +1,41 @@
+<script type="ts">
+  import type { JobCard } from '../types/JobCard';
+  export let jc: JobCard;
+  
+</script>
+
 <div class="job-card">
   <div class="job-card-header">
     <div class="job-card-header__logo">
-      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M6.5 10h-2v7h2v-7zm6 0h-2v7h2v-7zm8.5 9H2v2h19v-2zm-2.5-9h-2v7h2v-7zm-7-6.74L16.71 6H6.29l5.21-2.74m0-2.26L2 6v2h19V6l-9.5-5z"/></svg>
+    {@html jc.icon}
     </div>
   </div>
   <div class="job-card-body">
     <div class="job-card-body__time">
-      <span>5h Ago</span>
+      <span>{jc.time}h Ago</span>
       <span class="dot-separator">•</span>
-      <span>Full Time</span>
+      {#if jc.isFullTime}
+        <span>Full Time</span>
+      {:else}
+        <span>Part Time</span>
+      {/if}
     </div>
     <div class="job-card-body__job-title">
-      <h2>Senior Software Engineer</h2>
+      <h2>{jc.jobTitle}</h2>
     </div>
     <div class="job-card-body__job-company">
-      <span class="company">Scoot</span>
+      <span class="company">{jc.company}</span>
     </div>
   </div>
   <div class="job-card-footer">
-    <button class="location-name-filter">United Kingdom</button>
+    {#each jc.locations as location, i}
+      {#if i === jc.locations.length-1}
+        <button class="location-name-filter">{location}</button>
+      {:else}
+        <button class="location-name-filter">{location},</button>
+      {/if}
+    {/each}
+    
   </div>
 </div>
 
@@ -55,7 +72,7 @@
     top: -52px;
   }
 
-  .job-card-header__logo svg {
+  :global(.job-card-header__logo svg) {
     fill: #fff;
   }
 
@@ -73,6 +90,8 @@
 
   .job-card-footer {
     margin-top: 16px;
+    display: flex;
+    gap: 6px;
   }
 
   .location-name-filter {
