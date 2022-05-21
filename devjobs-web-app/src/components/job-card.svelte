@@ -1,12 +1,20 @@
 <script type="ts">
   import type { JobCard } from '../types/JobCard';
   export let jc: JobCard;
+
+  let iconBgColor = randomizeIconBackgroundColor();
+
+  function randomizeIconBackgroundColor() {
+    const hexCodes = ['#e06dae', '#3cb3d3', '#3e3b94', '#f0b529', '#e66c3b', '#242021', '#5965df', '#f97f68', '#007dfe', '#492a28', '#61dcad', '#ff5860'];
+
+    return hexCodes[Math.floor(Math.random() * hexCodes.length)];
+  }
   
 </script>
 
 <div class="job-card">
   <div class="job-card-header">
-    <div class="job-card-header__logo">
+    <div style="background-color: {iconBgColor}" class="job-card-header__logo">
     {@html jc.icon}
     </div>
   </div>
@@ -61,6 +69,7 @@
   }
 
   .job-card-header__logo {
+    /* Default backup color */
     background-color: #e06dae;
     width: 50px;
     height: 50px;
