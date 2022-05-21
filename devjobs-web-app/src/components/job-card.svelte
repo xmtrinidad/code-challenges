@@ -6,18 +6,78 @@
   </div>
   <div class="job-card-body">
     <div class="job-card-body__time">
-      <span>5h ago * Full Time</span>
+      <span>5h Ago</span>
+      <span class="dot-separator">•</span>
+      <span>Full Time</span>
     </div>
     <div class="job-card-body__job-title">
       <h2>Senior Software Engineer</h2>
+    </div>
+    <div class="job-card-body__job-company">
       <span class="company">Scoot</span>
     </div>
   </div>
   <div class="job-card-footer">
-    <span class="location">United Kingdom</span>
+    <button class="location-name-filter">United Kingdom</button>
   </div>
 </div>
 
 <style>
-  
+  .job-card {
+    width: 290px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 32px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .job-card-header {
+    margin-bottom: -28px;
+  }
+
+  .job-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .job-card-header__logo {
+    background-color: #e06dae;
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -52px;
+  }
+
+  .job-card-header__logo svg {
+    fill: #fff;
+  }
+
+  .job-card-body__time,
+  .job-card-body__job-company {
+    color: #8c90a0;
+    font-size: 1.22rem;
+    display: flex;
+    gap: 12px;
+  }
+
+  .job-card-body__job-title h2 {
+    color: #191f2e;
+  }
+
+  .job-card-footer {
+    margin-top: 16px;
+  }
+
+  .location-name-filter {
+    font-size: 1rem;
+    color: #6168df;
+    font-weight: 600;
+  }
 </style>

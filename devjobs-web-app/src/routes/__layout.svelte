@@ -12,3 +12,9 @@
 <!-- <footer>
   <span>This be the footer</span>
 </footer> -->
+
+<style>
+  main {
+    margin: 100px 0 24px 0;
+  }
+</style>

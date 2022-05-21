@@ -7,6 +7,17 @@
   ]
 </script>
 
-<!-- <div class="cards">
+<div class="job-cards">
   <JobCard></JobCard>
-</div> -->
+  <JobCard></JobCard>
+  <JobCard></JobCard>
+</div>
+
+<style>
+  .job-cards {
+    margin: 0 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+</style>
