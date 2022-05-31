@@ -5,14 +5,18 @@
   font-family: 'Tapestry', cursive;
 }
 
-h1, h2 {
-  margin: 0;
-}
-
 html, body {
   margin: 0;
   padding: 0;
   background-color: #f5f6f8;
+}
+
+h1, h2 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 button {

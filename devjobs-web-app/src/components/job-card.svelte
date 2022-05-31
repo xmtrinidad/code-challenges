@@ -12,7 +12,7 @@
   
 </script>
 
-<div class="job-card">
+<a href="/jobs/{jc.id}" class="job-card">
   <div class="job-card-header">
     <div style="background-color: {iconBgColor}" class="job-card-header__logo">
     {@html jc.icon}
@@ -45,7 +45,7 @@
     {/each}
     
   </div>
-</div>
+</a>
 
 <style>
   .job-card {
