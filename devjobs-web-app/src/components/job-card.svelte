@@ -1,6 +1,6 @@
 <script type="ts">
   import type { JobCard } from '../types/JobCard';
-  export let jc: JobCard;
+  export let job: JobCard;
 
   let iconBgColor = randomizeIconBackgroundColor();
 
@@ -12,32 +12,32 @@
   
 </script>
 
-<a href="/jobs/{jc.id}" class="job-card">
+<a href="/jobs/{job.id}" class="job-card">
   <div class="job-card-header">
     <div style="background-color: {iconBgColor}" class="job-card-header__logo">
-    {@html jc.icon}
+    {@html job.icon}
     </div>
   </div>
   <div class="job-card-body">
     <div class="job-card-body__time">
-      <span>{jc.time}h Ago</span>
+      <span>{job.time}h Ago</span>
       <span class="dot-separator">•</span>
-      {#if jc.isFullTime}
+      {#if job.isFullTime}
         <span>Full Time</span>
       {:else}
         <span>Part Time</span>
       {/if}
     </div>
     <div class="job-card-body__job-title">
-      <h2>{jc.jobTitle}</h2>
+      <h2>{job.jobTitle}</h2>
     </div>
     <div class="job-card-body__job-company">
-      <span class="company">{jc.company}</span>
+      <span class="company">{job.company}</span>
     </div>
   </div>
   <div class="job-card-footer">
-    {#each jc.locations as location, i}
-      {#if i === jc.locations.length-1}
+    {#each job.locations as location, i}
+      {#if i === job.locations.length-1}
         <button class="location-name-filter">{location}</button>
       {:else}
         <button class="location-name-filter">{location},</button>
